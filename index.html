@@ -183,14 +183,15 @@
   .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
   /* FOOTER */
-  footer{background:var(--ink);color:var(--muted-d);padding:66px 0 30px}
-  .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
+  footer{background:var(--ink);color:var(--muted-d);padding:66px 0 0}
+  .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:52px}
   .foot .brand{margin-bottom:14px}
   .foot p{font-size:14.5px;max-width:300px}
   .fcol h5{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
   .fcol a{display:block;color:var(--muted-d);font-size:14.5px;padding:6px 0;transition:.2s}
   .fcol a:hover{color:var(--gold)}
-  .fbottom{padding-top:24px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .fbottom{background:#03141E;font-size:13px}
+  .fbottom .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:18px;padding-bottom:18px}
 
   .reveal{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -577,11 +578,11 @@
       <div class="fcol"><h5>Company</h5><a href="#network">Network</a><a href="#innovation">Innovation</a><a href="#investors">Investors</a><a href="#careers">Careers</a></div>
       <div class="fcol"><h5>Contact</h5><a href="#contact">Talk to us</a><a href="#top">Lagos, Nigeria</a></div>
     </div>
-    <div class="fbottom">
-      <div>&copy; <span id="yr"></span> FrostHub Africa. All rights reserved.</div>
-      <div>Preserving quality. Ensuring freshness.</div>
-    </div>
   </div>
+  <div class="fbottom"><div class="wrap">
+    <div>&copy; <span id="yr"></span> FrostHub Africa. All rights reserved.</div>
+    <div>Preserving quality. Ensuring freshness.</div>
+  </div></div>
 </footer>
 
 <script>
