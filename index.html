@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FrostHub Africa | Reliability-First Cold Chain Infrastructure</title>
+<meta name="description" content="FrostHub Africa builds resilient, reliability-first cold chain infrastructure for Nigeria and West Africa: cold storage, reefer repair and maintenance, and import and export support, engineered to stay cold where the grid cannot." />
+<meta property="og:title" content="FrostHub Africa | Reliability-First Cold Chain Infrastructure" />
+<meta property="og:description" content="Guaranteed cold, where the grid cannot promise it. Modular cold storage, reefer maintenance, and import and export support at West Africa's ports." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<style>
+  :root{
+    --navy:#0C3A6B; --navy-2:#12457D; --ink:#05263B; --paper:#ffffff;
+    --mist:#F2F6FA; --mist-2:#E7EFF6; --line:#DCE6EF; --line-d:rgba(255,255,255,.16);
+    --gold:#00A6E6; --ice:#5CC0EE; --cyan2:#0072C6; --muted:#5A6B7A; --muted-d:rgba(255,255,255,.72);
+    --max:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
+  .serif{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.008em;line-height:1.15}
+  h1,h2,h3{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.008em;line-height:1.14}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .eyebrow.q{color:var(--ice)}
+  .lead{font-size:20px;color:var(--muted);font-weight:400}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:15px;padding:14px 28px;border-radius:999px;transition:.25s;cursor:pointer;border:1px solid transparent;font-family:'Inter'}
+  .btn svg{transition:.25s}
+  .btn:hover svg{transform:translateX(3px)}
+  .btn-primary{background:linear-gradient(135deg,#00B4F0,#0072C6);color:#fff;box-shadow:0 10px 24px rgba(0,150,224,.34)}
+  .btn-primary:hover{filter:brightness(1.08);box-shadow:0 14px 32px rgba(0,150,224,.46);transform:translateY(-1px)}
+  .logo-img{height:51px;width:auto;display:block}
+  .foot .logo-img{height:57px;margin-bottom:16px}
+  .btn-ice{background:var(--ice);color:#03212e}
+  .btn-ice:hover{background:#57bfe0}
+  .btn-line{border-color:rgba(255,255,255,.3);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.08)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark:hover{background:var(--navy-2)}
+  .arrowlink{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);padding-bottom:5px;border-bottom:2px solid var(--gold);transition:.2s}
+  .arrowlink:hover{gap:14px}
+  .arrowlink.on-dark{color:#fff}
+
+  /* UTILITY + NAV */
+  .util{background:var(--ink);color:var(--muted-d);font-size:12.5px;letter-spacing:.04em}
+  .util .wrap{display:flex;justify-content:flex-end;gap:26px;padding-top:9px;padding-bottom:9px}
+  .util a{transition:.2s}.util a:hover{color:#fff}
+  header{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--line-d);transition:.3s}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .mark{width:30px;height:30px}
+  .brand .wordmark{font-family:'Newsreader';font-weight:600;font-size:20px;letter-spacing:.01em}
+  .brand .wordmark b{color:var(--gold);font-weight:600}
+  .navlinks{display:flex;align-items:center;gap:32px}
+  .navlinks a{color:rgba(255,255,255,.84);font-size:15px;font-weight:500;transition:.2s;position:relative}
+  .navlinks a:not(.btn):hover{color:#fff}
+  .navlinks a:not(.btn):after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:var(--gold);transition:.25s}
+  .navlinks a:not(.btn):hover:after{right:0}
+  .menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,#0C3A6B 0%,#0A3560 45%,#062A46 100%);color:#fff;overflow:hidden}.hero:after{content:"";position:absolute;left:-4%;bottom:-12%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,230,.30),transparent 66%);z-index:1;pointer-events:none}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;min-height:82vh;align-items:center}
+  .hero-copy{padding:70px 0 90px;position:relative;z-index:3}
+  .hero h1{font-size:clamp(40px,5.6vw,72px);font-weight:400;margin:22px 0 24px;max-width:660px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p{font-size:20px;color:var(--muted-d);max-width:520px;margin-bottom:36px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-visual{position:absolute;top:0;right:0;bottom:0;width:52%;z-index:1}
+  .hero-visual .panel{position:absolute;inset:0;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);
+    background:linear-gradient(150deg,#0e3a52 0%,#0a2b3d 55%,#061c29 100%);overflow:hidden}
+  /* replace .panel background-image with your aerial port/reefer photo for full richness */
+  .hero-visual .photo{position:absolute;inset:0;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);
+    background-size:cover;background-position:center;opacity:.82}
+  .iso{position:absolute;inset:0;opacity:.5}
+  .hero:before{content:"";position:absolute;inset:0;z-index:2;background-image:linear-gradient(var(--line-d) 1px,transparent 1px),linear-gradient(90deg,var(--line-d) 1px,transparent 1px);background-size:72px 72px;opacity:.4;mask-image:radial-gradient(600px 420px at 12% 40%,#000,transparent 78%)}
+  .hero-strip{position:relative;z-index:3;border-top:1px solid var(--line-d)}
+  .hero-strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .hstat{padding:22px 0;border-right:1px solid var(--line-d)}
+  .hstat:last-child{border-right:none}
+  .hstat .k{font-family:'Newsreader';font-size:15px;color:var(--gold);letter-spacing:.02em}
+  .hstat .v{font-size:13.5px;color:var(--muted-d);margin-top:2px}
+
+  /* LEAD BAND */
+  .band-lead{padding:100px 0 20px}
+  .band-lead h2{font-size:clamp(28px,3.5vw,44px);max-width:900px;font-weight:400}
+  .band-lead h2 span{color:var(--muted)}
+
+  section{padding:100px 0}
+  .sec-head{max-width:760px;margin-bottom:56px}
+  .sec-head h2{font-size:clamp(30px,3.8vw,46px);margin:16px 0 18px;color:var(--navy)}
+  .sec-head p{font-size:19px;color:var(--muted)}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+  .mist{background:var(--mist)}
+
+  /* SOLUTION CARDS */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .scard{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.3s}
+  .scard{border-top:3px solid transparent}.scard:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(6,32,47,.12);border-top-color:var(--gold)}
+  .scard .thumb{aspect-ratio:16/10;background-size:cover;background-position:center;position:relative}
+  .scard .thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(6,32,47,.12),rgba(6,32,47,.55))}
+  .scard .thumb .ic{position:absolute;left:22px;bottom:18px;z-index:2;color:#fff}
+  .scard .body{padding:30px 28px 32px;flex:1;display:flex;flex-direction:column}
+  .scard h3{font-size:23px;color:var(--navy);margin-bottom:12px}
+  .scard p{color:var(--muted);font-size:16px;flex:1;margin-bottom:22px}
+
+  /* CASE STUDY */
+  .case{background:var(--navy);color:#fff;overflow:hidden}
+  .case-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .case-copy{padding:96px 64px 96px 0}
+  .case .eyebrow{color:var(--ice)}
+  .case h2{font-size:clamp(28px,3.4vw,42px);margin:18px 0 20px;color:#fff}
+  .case p{color:var(--muted-d);font-size:18px;margin-bottom:20px;max-width:520px}
+  .case .big{font-family:'Newsreader';font-size:clamp(44px,6vw,72px);color:var(--gold);line-height:1;margin:6px 0 4px}
+  .case .bigcap{color:var(--muted-d);font-size:15px;margin-bottom:30px}
+  .case-visual{position:relative;background:linear-gradient(140deg,#0e3a52,#061c29);min-height:440px;background-size:cover;background-position:center}
+  .case-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy),transparent 30%)}
+
+  /* NETWORK */
+  .net-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .mapwrap{border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f7fafb);padding:26px;border-radius:2px}
+  .regions{display:flex;flex-direction:column}
+  .region{padding:26px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:30px 1fr auto;gap:18px;align-items:start}
+  .region:last-child{border-bottom:1px solid var(--line)}
+  .region .n{font-family:'Newsreader';color:var(--gold);font-size:16px}
+  .region b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
+  .region span{color:var(--muted);font-size:15px}
+  .region .st{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);font-weight:600;align-self:center}
+
+  /* INNOVATION */
+  .cards2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .icard{border:1px solid var(--line);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+  .icard:hover{box-shadow:0 26px 50px rgba(6,32,47,.10)}
+  .icard .thumb{aspect-ratio:16/8;background-size:cover;background-position:center;position:relative}
+  .icard .thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(6,32,47,.1),rgba(6,32,47,.5))}
+  .icard .body{padding:34px 32px 36px}
+  .icard h3{font-size:25px;color:var(--navy);margin-bottom:12px}
+  .icard p{color:var(--muted);margin-bottom:22px}
+
+  /* IMPACT STRIP */
+  .impact{background:var(--ink);color:#fff}
+  .impact .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .imp{padding:52px 24px;border-right:1px solid var(--line-d)}
+  .imp:last-child{border-right:none}
+  .imp .num{font-family:'Newsreader';font-size:clamp(32px,3.6vw,52px);color:var(--gold)}
+  .imp .cap{font-size:14.5px;color:var(--muted-d);margin-top:8px}
+
+  /* INVESTORS */
+  .inv-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .inv-pts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .ip{background:#fff;padding:28px 24px;border-top:3px solid var(--gold)}
+  .ip .n{font-family:'Newsreader';font-size:21px;color:var(--navy)}
+  .ip .c{font-size:14.5px;color:var(--muted);margin-top:6px}
+
+  /* INSIGHTS */
+  .cards3.insights .icard .thumb{aspect-ratio:16/9}
+  .icat{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+  .idate{font-size:13px;color:var(--muted);margin-top:14px}
+  .icard.post .body{padding:28px 26px 30px}
+  .icard.post h3{font-size:21px}
+
+  /* CAREERS */
+  .careers{position:relative;background:linear-gradient(90deg,rgba(8,40,76,.28),rgba(8,40,76,.74)),url('images/careers.jpg');background-size:cover;background-position:center;color:#fff}
+  .careers .wrap{position:relative;min-height:460px;display:flex;align-items:center}
+  .careers-card{background:rgba(6,32,47,.72);backdrop-filter:blur(6px);border:1px solid var(--line-d);padding:46px;max-width:480px;margin-left:auto}
+  .careers-card h2{font-size:32px;color:#fff;margin:14px 0 16px}
+  .careers-card p{color:var(--muted-d);margin-bottom:26px}
+
+  /* CTA */
+  .cta{background:var(--navy);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(32px,4.5vw,58px);max-width:820px;margin:18px auto 22px;color:#fff}
+  .cta p{color:var(--muted-d);font-size:19px;max-width:520px;margin:0 auto 34px}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:var(--muted-d);padding:66px 0 30px}
+  .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
+  .foot .brand{margin-bottom:14px}
+  .foot p{font-size:14.5px;max-width:300px}
+  .fcol h5{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+  .fcol a{display:block;color:var(--muted-d);font-size:14.5px;padding:6px 0;transition:.2s}
+  .fcol a:hover{color:var(--gold)}
+  .fbottom{padding-top:24px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:960px){
+    .hero-inner{grid-template-columns:1fr;min-height:auto}
+    .hero-visual{position:relative;width:100%;height:300px;order:-1}
+    .hero-visual .panel,.hero-visual .photo{clip-path:polygon(0 14%,100% 0,100% 100%,0 100%)}
+    .hero-copy{padding:56px 0 64px}
+    .cards3,.cards2,.net-grid,.case-grid,.inv-grid,.impact .wrap{grid-template-columns:1fr}
+    .case-copy{padding:64px 0}
+    .case-visual{min-height:300px}
+    .impact .imp{border-right:none;border-bottom:1px solid var(--line-d);padding:34px 0}
+    .foot{grid-template-columns:1fr 1fr}
+    .navlinks{display:none}.menu-btn{display:block}
+    .navlinks.open{display:flex;position:absolute;top:63px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--navy);padding:22px 32px;gap:18px;border-bottom:1px solid var(--line-d)}
+    section{padding:72px 0}.band-lead{padding:72px 0 0}
+    .hero-strip .wrap{grid-template-columns:1fr}
+    .hstat{border-right:none;border-bottom:1px solid var(--line-d)}
+  }
+  @media(max-width:560px){.inv-pts{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.util .wrap{gap:16px}}
+
+  .cform{max-width:660px;margin:18px auto 0;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cform .full{grid-column:1/-1}
+  .cform label{display:block;font-size:12.5px;letter-spacing:.03em;color:var(--muted-d);margin-bottom:7px;font-weight:500}
+  .cform input,.cform select,.cform textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:#fff;font-family:inherit;font-size:15px;transition:.2s}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(0,166,230,.18)}
+  .cform textarea{min-height:120px;resize:vertical}
+  .cform input::placeholder,.cform textarea::placeholder{color:rgba(255,255,255,.45)}
+  .cform select option{color:#04213e}
+  .cform .btn{width:100%;justify-content:center}
+  @media(max-width:560px){.cform{grid-template-columns:1fr}}
+  .brightblue{background:linear-gradient(135deg,#0091DA 0%,#00A6E6 100%)}
+  .brightblue .eyebrow{color:#fff}
+  .brightblue .sec-head h2{color:#fff}
+  .brightblue .sec-head p{color:rgba(255,255,255,.92)}
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <a href="#investors">Investor Relations</a>
+  <a href="#careers">Careers</a>
+  <a href="#contact">Contact</a>
+  <a href="#top">EN</a>
+</div></div>
+
+<header id="hdr"><div class="wrap"><nav>
+  <a href="#top" class="brand" aria-label="FrostHub Africa">
+    <img class="logo-img" src="images/frosthub-logo-darkbg.png" alt="FrostHub Africa" />
+  </a>
+  <div class="navlinks" id="nav">
+    <a href="#solutions">Solutions</a>
+    <a href="#network">Network</a>
+    <a href="#innovation">Innovation</a>
+    <a href="#investors">Investors</a>
+    <a href="#insights">Insights</a>
+    <a href="#contact" class="btn btn-primary" style="padding:10px 20px">Talk to us</a>
+  </div>
+  <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</nav></div></header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-visual">
+    <div class="panel">
+      <!-- To use a photo: add background-image on .photo below -->
+      <div class="photo" style="background-image:url('images/hero.jpg')"></div>
+      <svg class="iso" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="#5CC0EE" stroke-width="1" opacity="0.5">
+          <path d="M-40 120 C 160 60, 380 200, 640 90"/>
+          <path d="M-40 220 C 160 160, 380 300, 640 190"/>
+          <path d="M-40 320 C 160 260, 380 400, 640 290"/>
+          <path d="M-40 440 C 180 380, 400 520, 660 410"/>
+          <path d="M-40 560 C 180 500, 400 640, 660 530"/>
+          <path d="M-40 680 C 180 620, 400 760, 660 650"/>
+        </g>
+        <g fill="#1E9BE0" opacity="0.9">
+          <circle cx="150" cy="150" r="3.5"/><circle cx="330" cy="250" r="3.5"/><circle cx="470" cy="200" r="3.5"/>
+          <circle cx="250" cy="470" r="3.5"/><circle cx="430" cy="560" r="3.5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap"><div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Built for what West Africa needs next</div>
+      <h1>Guaranteed cold, where the grid <em>cannot promise it.</em></h1>
+      <p>FrostHub Africa builds resilient, reliability-first cold chain infrastructure for Nigeria and West Africa. We do not just store perishables. We own the uptime problem that everyone else leaves to chance.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Talk to us
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#solutions" class="btn btn-line">See how we help</a>
+      </div>
+    </div>
+  </div></div>
+  <div class="hero-strip"><div class="wrap">
+    <div class="hstat"><div class="k">-25&deg;C to +25&deg;C</div><div class="v">Frozen, chilled and pharma-grade in one platform</div></div>
+    <div class="hstat"><div class="k">24 / 7 in-house maintenance</div><div class="v">We control uptime, we do not outsource it</div></div>
+    <div class="hstat"><div class="k">Solar + PCM managed power</div><div class="v">Engineered to stay cold through any outage</div></div>
+  </div></div>
+</section>
+
+<!-- LEAD -->
+<div class="band-lead"><div class="wrap reveal">
+  <div class="eyebrow">Food supply chain infrastructure</div>
+  <h2 style="margin-top:18px">A reliability-first cold chain platform for Nigeria and West Africa. <span>We turn the region's biggest logistics failure into dependable, revenue-generating infrastructure.</span></h2>
+</div></div>
+
+<!-- SOLUTIONS -->
+<section id="solutions">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Built around the reefer, sited at the port</h2>
+      <p class="lead">Storage, servicing and trade support engineered for the way West African supply chains actually move. We stay out of trucking and inland distribution and focus on being the most reliable node at the quay.</p>
+    </div>
+    <div class="cards3">
+      <article class="scard reveal">
+        <div class="thumb" style="background-image:url('images/storage.jpg')">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="12" rx="1"/><path d="M3 11h18M8 7V5h8v2"/></svg></div>
+        </div>
+        <div class="body">
+          <h3>Cold Storage &amp; Warehousing</h3>
+          <p>Short and medium-term temperature-controlled storage from -25&deg;C to +25&deg;C, with monitored uptime guarantees for frozen, chilled and pharmaceutical goods.</p>
+          <a href="#contact" class="arrowlink">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb" style="background-image:url('images/maintenance.jpg')">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6l4 4M3 21l3-1 11-11-3-3L3 18z"/><path d="M17 3l4 4"/></svg></div>
+        </div>
+        <div class="body">
+          <h3>Reefer Repair &amp; Maintenance</h3>
+          <p>In-house technicians for pre-trip inspections, preventive servicing and 24/7 emergency repair, across Carrier, Thermo King, Daikin and Star Cool, for our fleet and for shipping lines.</p>
+          <a href="#contact" class="arrowlink">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb" style="background-image:url('images/trade.jpg')">
+          <div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></div>
+        </div>
+        <div class="body">
+          <h3>Import &amp; Export Support</h3>
+          <p>Cold handling, holding and readiness at the port for seafood, fish, pharma and dairy, keeping high-value cargo in condition through clearance without touching the freight itself.</p>
+          <a href="#contact" class="arrowlink">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case" style="padding:0">
+  <div class="wrap"><div class="case-grid">
+    <div class="case-copy reveal">
+      <div class="eyebrow">When cargo cannot wait</div>
+      <h2>One outage can spoil an entire vessel of cargo</h2>
+      <p>At Nigeria's ports, hundreds of refrigerated containers depend on power that fails daily. A single lapse turns high-value seafood and pharma into a total loss, and turns days of delay into cancelled orders.</p>
+      <div class="big">40-50%</div>
+      <div class="bigcap">of perishable produce is lost every year, worth over 9 billion dollars, most of it to cold chain failure</div>
+      <a href="#solutions" class="arrowlink on-dark">How we solve it <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="case-visual" style="background-image:url('images/case.jpg')">
+      <!-- replace background-image with a port / reefer stack photo -->
+    </div>
+  </div></div>
+</section>
+
+<!-- NETWORK -->
+<section id="network">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The network</div>
+      <h2>Positioned at the region's trade gateways</h2>
+      <p class="lead">We site infrastructure where high-value cargo already moves, the deepwater ports and logistics corridors of Lagos, then replicate the model across West Africa.</p>
+    </div>
+    <div class="net-grid">
+      <div class="mapwrap reveal">
+        <svg viewBox="0 0 500 360" fill="none" style="width:100%">
+          <path d="M60 70 L200 55 L300 70 L360 120 L410 150 L430 210 L390 270 L300 300 L210 305 L140 280 L90 220 L60 150 Z" fill="#E9F1F4" stroke="#CFDCE1" stroke-width="1.5"/>
+          <text x="120" y="110" fill="#8AA0AB" font-family="Inter" font-size="12" letter-spacing="1">WEST AFRICA</text>
+          <g>
+            <circle cx="255" cy="235" r="7" fill="#1E9BE0"/><circle cx="255" cy="235" r="14" fill="#1E9BE0" opacity="0.22"/>
+            <text x="272" y="239" fill="#06202F" font-family="Inter" font-size="13" font-weight="600">Lagos</text>
+            <circle cx="300" cy="215" r="4.5" fill="#5CC0EE"/>
+            <circle cx="220" cy="250" r="4.5" fill="#5CC0EE"/>
+          </g>
+          <path d="M255 235 C 320 180, 380 200, 405 160" stroke="#1E9BE0" stroke-width="1.4" stroke-dasharray="3 4" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="regions reveal">
+        <div class="region"><span class="n">01</span><div><b>Lekki Free Trade Zone Port</b><span>West Africa's fastest-growing deepwater terminal. Hundreds of reefer plugs and no in-house repair. Our anchor opportunity.</span></div><span class="st">Priority</span></div>
+        <div class="region"><span class="n">02</span><div><b>Oshodi Logistics Hub</b><span>Central Lagos distribution node serving importers, distributors and traders across the metro.</span></div><span class="st">Live</span></div>
+        <div class="region"><span class="n">03</span><div><b>Apapa &amp; Tin Can</b><span>Nigeria's largest port complex, next in the roadmap for port-side storage and repair.</span></div><span class="st">Roadmap</span></div>
+        <div class="region"><span class="n">04</span><div><b>West Africa expansion</b><span>A replicable, asset-backed model built to extend along the region's trade corridors.</span></div><span class="st">Vision</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INNOVATION -->
+<section id="innovation" class="brightblue">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Innovation &amp; sustainability</div>
+      <h2>We are driven by the promise of better</h2>
+      <p class="lead">The reason FrostHub stays cold when others cannot is engineering, not luck.</p>
+    </div>
+    <div class="cards2">
+      <article class="icard reveal">
+        <div class="thumb" style="background-image:url('images/power.jpg')"></div>
+        <div class="body">
+          <h3>Power that never lets the cold go warm</h3>
+          <p>Grid, generator and a solar-plus-PCM thermal battery working as one system. Cold is stored as latent heat and released through outages, so diesel becomes a last resort rather than a daily cost, and margins hold where competitors bleed fuel.</p>
+          <a href="#contact" class="arrowlink">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="icard reveal">
+        <div class="thumb" style="background-image:url('images/foodloss.jpg')"></div>
+        <div class="body">
+          <h3>Built to end avoidable food loss</h3>
+          <p>Every reliable container keeps produce, protein and medicine in condition from port to market. Less waste, more income for producers, and a more resilient food system for a region of hundreds of millions.</p>
+          <a href="#contact" class="arrowlink">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<div class="impact"><div class="wrap">
+  <div class="imp reveal"><div class="num" data-count="45" data-suffix="%">0%</div><div class="cap">of perishables lost annually in Nigeria</div></div>
+  <div class="imp reveal"><div class="num" data-count="25000" data-suffix="+">0</div><div class="cap">reefer trucks needed, fewer than 1,000 exist</div></div>
+  <div class="imp reveal"><div class="num" data-count="20" data-suffix="%">0%</div><div class="cap">of required cold storage exists today</div></div>
+  <div class="imp reveal"><div class="num" data-count="9" data-prefix="$" data-suffix="B+">$0</div><div class="cap">lost each year to cold chain failure</div></div>
+</div></div>
+
+<!-- INVESTORS -->
+<section id="investors">
+  <div class="wrap">
+    <div class="inv-grid">
+      <div class="reveal">
+        <div class="eyebrow">For investors</div>
+        <h2 style="font-size:clamp(30px,3.6vw,46px);color:var(--navy);margin:16px 0 18px">Critical infrastructure, proven demand, asset-backed returns</h2>
+        <p class="lead" style="margin-bottom:30px">FrostHub is already operating with paying customers and a clear path from a single Lagos hub to the leading reliable cold-chain platform in West Africa. Capital funds hard, resaleable assets, not burn.</p>
+        <a href="#contact" class="btn btn-dark">Request investor materials
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="inv-pts reveal">
+        <div class="ip"><div class="n">Live revenue</div><div class="c">Paying customers, expanding from one container to many</div></div>
+        <div class="ip"><div class="n">Asset-backed</div><div class="c">Reefers hold resale value, protecting the downside</div></div>
+        <div class="ip"><div class="n">Port R&amp;M wedge</div><div class="c">First-mover reefer repair opportunity at Lekki Port</div></div>
+        <div class="ip"><div class="n">Scalable</div><div class="c">Each container is a self-contained revenue unit</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights" class="mist">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Insights &amp; stories</div>
+      <h2>Keep pace with a future-forward partner</h2>
+    </div>
+    <div class="cards3 insights">
+      <article class="icard post reveal">
+        <div class="thumb" style="background-image:url('images/insight-1.jpg')"></div>
+        <div class="body"><span class="icat">Perspective</span><h3>Why reliability, not price, is the real cold chain unlock in Nigeria</h3><div class="idate">Coming soon</div></div>
+      </article>
+      <article class="icard post reveal">
+        <div class="thumb" style="background-image:url('images/insight-2.jpg')"></div>
+        <div class="body"><span class="icat">Technology</span><h3>Solar and phase-change power: how a container stays cold with the grid down</h3><div class="idate">Coming soon</div></div>
+      </article>
+      <article class="icard post reveal">
+        <div class="thumb" style="background-image:url('images/insight-3.jpg')"></div>
+        <div class="body"><span class="icat">Ports</span><h3>Inside the Lekki reefer opportunity West Africa's shipping lines are waiting for</h3><div class="idate">Coming soon</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section class="careers" id="careers" style="padding:0">
+  <div class="wrap"><div class="careers-card reveal">
+    <div class="eyebrow q">Careers</div>
+    <h2>Build the cold chain West Africa needs</h2>
+    <p>We are assembling a lean, execution-focused team of technicians, operators and builders who want their work to keep food and medicine from spoiling across a region.</p>
+    <a href="#contact" class="btn btn-primary">Join our team
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div></div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="eyebrow center reveal">Get in touch</div>
+    <h2 class="reveal">Let's keep your cargo cold.</h2>
+    <p class="reveal">Reliable storage at the port, reefer servicing, or an investment conversation. We reply within one business day.</p>
+    <form class="cform reveal" action="https://formsubmit.co/info@frosthubafrica.com" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry from frosthubafrica.com" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <div><label>Name</label><input name="name" required placeholder="Your name" /></div>
+      <div><label>Email</label><input type="email" name="email" required placeholder="you@company.com" /></div>
+      <div><label>Company</label><input name="company" placeholder="Company (optional)" /></div>
+      <div><label>I&rsquo;m interested in</label><select name="interest"><option>Cold storage</option><option>Reefer repair &amp; maintenance</option><option>Import &amp; export support</option><option>Investment</option><option>Careers</option></select></div>
+      <div class="full"><label>Message</label><textarea name="message" placeholder="Tell us what you need"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Send message
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand"><img class="logo-img" src="images/frosthub-logo-darkbg.png" alt="FrostHub Africa" /></a>
+        <p>Reliability-first cold chain infrastructure for Nigeria and West Africa. Guaranteed cold, where the grid cannot promise it.</p>
+      </div>
+      <div class="fcol"><h5>Solutions</h5><a href="#solutions">Cold Storage</a><a href="#solutions">Reefer Repair &amp; Maintenance</a><a href="#solutions">Import &amp; Export Support</a></div>
+      <div class="fcol"><h5>Company</h5><a href="#network">Network</a><a href="#innovation">Innovation</a><a href="#investors">Investors</a><a href="#careers">Careers</a></div>
+      <div class="fcol"><h5>Contact</h5><a href="#contact">Talk to us</a><a href="#top">Lagos, Nigeria</a></div>
+    </div>
+    <div class="fbottom">
+      <div>&copy; <span id="yr"></span> FrostHub Africa. All rights reserved.</div>
+      <div>Preserving quality. Ensuring freshness.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const fmt=n=>n>=1000?n.toLocaleString():n;
+  const cio=new IntersectionObserver((es)=>es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target;cio.unobserve(el);
+    const t=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';let s=0,step=t/55;
+    const run=()=>{s+=step;if(s>=t){el.textContent=pre+fmt(t)+suf}else{el.textContent=pre+fmt(Math.floor(s))+suf;requestAnimationFrame(run)}};run();
+  }),{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
