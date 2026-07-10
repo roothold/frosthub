@@ -8,6 +8,9 @@
 <meta property="og:title" content="FrostHub Africa | Reliability-First Cold Chain Infrastructure" />
 <meta property="og:description" content="Guaranteed cold, where the grid cannot promise it. Modular cold storage, reefer maintenance, and import and export support at West Africa's ports." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="images/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="images/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -224,6 +227,30 @@
   .brightblue .eyebrow{color:#fff}
   .brightblue .sec-head h2{color:#fff}
   .brightblue .sec-head p{color:rgba(255,255,255,.92)}
+
+  /* motion + new components */
+  .scard,.icard{overflow:hidden}
+  .scard .thumb,.icard .thumb{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .scard:hover .thumb,.icard:hover .thumb{transform:scale(1.06)}
+  @keyframes drift{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+  .iso{animation:drift 16s ease-in-out infinite}
+  .iexc{color:var(--muted);font-size:14.5px;line-height:1.55;margin:10px 0 16px}
+  .rmore{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);transition:.2s}
+  .rmore:hover{gap:12px}
+  .trust-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-top:44px}
+  .trust-strip .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+  .trust-strip .tl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .trust-strip .tc{font-family:'Newsreader';font-size:19px;color:var(--navy)}
+  .trust-strip .tdot{color:#B9CAD9}
+  .trust-strip .tbadge{margin-left:auto;font-size:12px;font-weight:600;color:#0072C6;background:rgba(0,166,230,.09);border:1px solid rgba(0,166,230,.28);padding:7px 15px;border-radius:999px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{background:#fff;border:1px solid var(--line);padding:34px 28px;transition:.3s}
+  .step:hover{transform:translateY(-6px);box-shadow:0 24px 46px rgba(6,32,47,.10)}
+  .step .snum{font-family:'Newsreader';font-size:15px;color:var(--gold);letter-spacing:.12em;margin-bottom:16px}
+  .step .sic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#00B4F0,#0072C6);display:grid;place-items:center;color:#fff;margin-bottom:18px;box-shadow:0 8px 20px rgba(0,150,224,.28)}
+  .step h3{font-size:22px;color:var(--navy);margin-bottom:10px}
+  .step p{color:var(--muted);font-size:15.5px}
+  @media(max-width:900px){.trust-strip .tbadge{margin-left:0}.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -299,6 +326,14 @@
   <h2 style="margin-top:18px">A reliability-first cold chain platform for Nigeria and West Africa. <span>We turn the region's biggest logistics failure into dependable, revenue-generating infrastructure.</span></h2>
 </div></div>
 
+<div class="trust-strip">
+  <div class="wrap">
+    <span class="tl">Reefer-certified across</span>
+    <span class="tc">Carrier</span><span class="tdot">&middot;</span><span class="tc">Thermo King</span><span class="tdot">&middot;</span><span class="tc">Daikin</span><span class="tdot">&middot;</span><span class="tc">Star Cool</span>
+    <span class="tbadge">Operating at Lagos ports today</span>
+  </div>
+</div>
+
 <!-- SOLUTIONS -->
 <section id="solutions">
   <div class="wrap">
@@ -359,6 +394,22 @@
   </div></div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section id="how" class="mist">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">How we keep it cold</div>
+      <h2>Cold that survives the grid, in three steps</h2>
+      <p class="lead">Everyone else stores power and hopes it lasts. We store the cold itself.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="snum">01</div><div class="sic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><h3>Charge</h3><p>Solar and grid power freeze a phase-change thermal bank inside every unit during the hours power is available.</p></div>
+      <div class="step reveal"><div class="snum">02</div><div class="sic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div><h3>Store</h3><p>Cold is held as latent heat for many hours with the compressor off, so an outage never means a warm container.</p></div>
+      <div class="step reveal"><div class="snum">03</div><div class="sic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Deliver</h3><p>Product holds its exact temperature band from quay to collection, backed by a monitored uptime guarantee.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- NETWORK -->
 <section id="network">
   <div class="wrap">
@@ -369,16 +420,25 @@
     </div>
     <div class="net-grid">
       <div class="mapwrap reveal">
-        <svg viewBox="0 0 500 360" fill="none" style="width:100%">
-          <path d="M60 70 L200 55 L300 70 L360 120 L410 150 L430 210 L390 270 L300 300 L210 305 L140 280 L90 220 L60 150 Z" fill="#E9F1F4" stroke="#CFDCE1" stroke-width="1.5"/>
-          <text x="120" y="110" fill="#8AA0AB" font-family="Inter" font-size="12" letter-spacing="1">WEST AFRICA</text>
-          <g>
-            <circle cx="255" cy="235" r="7" fill="#1E9BE0"/><circle cx="255" cy="235" r="14" fill="#1E9BE0" opacity="0.22"/>
-            <text x="272" y="239" fill="#06202F" font-family="Inter" font-size="13" font-weight="600">Lagos</text>
-            <circle cx="300" cy="215" r="4.5" fill="#5CC0EE"/>
-            <circle cx="220" cy="250" r="4.5" fill="#5CC0EE"/>
+        <svg viewBox="0 0 520 380" fill="none" style="width:100%;display:block">
+          <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCEAF6"/><stop offset="1" stop-color="#EBF4FB"/></linearGradient></defs>
+          <rect x="0" y="0" width="520" height="380" fill="url(#sea)"/>
+          <g stroke="#CBDCEA" stroke-width="1" opacity="0.5"><path d="M0 95 H520 M0 190 H520 M0 285 H520 M130 0 V380 M260 0 V380 M390 0 V380"/></g>
+          <path d="M-10 250 C 80 210, 150 206, 210 220 C 262 233, 302 210, 362 205 C 432 199, 492 220, 530 206 L 530 -10 L -10 -10 Z" fill="#F5F9FC" stroke="#C6D8E7" stroke-width="1.5"/>
+          <text x="30" y="58" fill="#9DB2C2" font-family="Inter" font-size="12" letter-spacing="3">WEST AFRICA</text>
+          <text x="352" y="338" fill="#B9CAD9" font-family="Inter" font-size="10.5" letter-spacing="2">GULF OF GUINEA</text>
+          <g stroke="#1E9BE0" stroke-width="1.6" opacity="0.45" stroke-linecap="round"><path d="M250 164 L205 210"/><path d="M250 164 L330 212"/><path d="M205 210 L330 212"/></g>
+          <path d="M330 212 C 232 286, 132 270, 68 236" stroke="#1E9BE0" stroke-width="1.6" stroke-dasharray="2 6" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="68" cy="236" r="4" fill="#9DC7E6"/>
+          <text x="34" y="230" fill="#9DB2C2" font-family="Inter" font-size="10" letter-spacing="1">EXPANSION</text>
+          <g font-family="Inter">
+            <circle cx="250" cy="164" r="5" fill="#0C3A6B"/><text x="262" y="161" fill="#0C3A6B" font-size="12" font-weight="600">Oshodi</text>
+            <circle cx="205" cy="210" r="5" fill="#0C3A6B"/><text x="150" y="207" fill="#0C3A6B" font-size="12" font-weight="600">Apapa</text>
+            <circle cx="330" cy="212" r="10" fill="#1E9BE0" opacity="0.22"><animate attributeName="r" values="10;24;10" dur="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.30;0;0.30" dur="2.8s" repeatCount="indefinite"/></circle>
+            <circle cx="330" cy="212" r="7" fill="#1E9BE0"/><circle cx="330" cy="212" r="2.6" fill="#fff"/>
+            <text x="344" y="209" fill="#0C3A6B" font-size="12.5" font-weight="700">Lekki FTZ</text>
+            <text x="344" y="224" fill="#1E9BE0" font-size="9" font-weight="700" letter-spacing="1.5">PRIORITY</text>
           </g>
-          <path d="M255 235 C 320 180, 380 200, 405 160" stroke="#1E9BE0" stroke-width="1.4" stroke-dasharray="3 4" opacity="0.7"/>
         </svg>
       </div>
       <div class="regions reveal">
@@ -459,15 +519,15 @@
     <div class="cards3 insights">
       <article class="icard post reveal">
         <div class="thumb" style="background-image:url('images/insight-1.jpg')"></div>
-        <div class="body"><span class="icat">Perspective</span><h3>Why reliability, not price, is the real cold chain unlock in Nigeria</h3><div class="idate">Coming soon</div></div>
+        <div class="body"><span class="icat">Perspective</span><h3>Why reliability, not price, is the real cold-chain unlock</h3><p class="iexc">Uptime, not tariffs, is what turns proven demand into paying, repeat usage. The constraint everyone underestimates.</p><a href="#contact" class="rmore">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </article>
       <article class="icard post reveal">
         <div class="thumb" style="background-image:url('images/insight-2.jpg')"></div>
-        <div class="body"><span class="icat">Technology</span><h3>Solar and phase-change power: how a container stays cold with the grid down</h3><div class="idate">Coming soon</div></div>
+        <div class="body"><span class="icat">Technology</span><h3>How a container stays cold with the grid down</h3><p class="iexc">Solar plus a phase-change thermal battery holds temperature for hours without a watt. The engineering behind the moat.</p><a href="#contact" class="rmore">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </article>
       <article class="icard post reveal">
         <div class="thumb" style="background-image:url('images/insight-3.jpg')"></div>
-        <div class="body"><span class="icat">Ports</span><h3>Inside the Lekki reefer opportunity West Africa's shipping lines are waiting for</h3><div class="idate">Coming soon</div></div>
+        <div class="body"><span class="icat">Ports</span><h3>Inside the Lekki reefer opportunity</h3><p class="iexc">Six hundred reefer plugs, no local repair, and shipping lines without technicians. Why the first mover wins the port.</p><a href="#contact" class="rmore">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </article>
     </div>
   </div>
@@ -532,8 +592,8 @@
   const fmt=n=>n>=1000?n.toLocaleString():n;
   const cio=new IntersectionObserver((es)=>es.forEach(e=>{
     if(!e.isIntersecting)return;const el=e.target;cio.unobserve(el);
-    const t=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';let s=0,step=t/55;
-    const run=()=>{s+=step;if(s>=t){el.textContent=pre+fmt(t)+suf}else{el.textContent=pre+fmt(Math.floor(s))+suf;requestAnimationFrame(run)}};run();
+    const t=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',dur=1900,t0=performance.now();
+    const run=(now)=>{let p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=pre+fmt(Math.round(t*e))+suf;if(p<1)requestAnimationFrame(run);else el.textContent=pre+fmt(t)+suf;};requestAnimationFrame(run);
   }),{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
   document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
