@@ -613,11 +613,11 @@
 <script>
   const hdr=document.getElementById('hdr');
   document.getElementById('yr').textContent=new Date().getFullYear();
-  const io=new MulishsectionObserver((es)=>es.forEach(e=>{if(e.isMulishsecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   const fmt=n=>n>=1000?n.toLocaleString():n;
-  const cio=new MulishsectionObserver((es)=>es.forEach(e=>{
-    if(!e.isMulishsecting)return;const el=e.target;cio.unobserve(el);
+  const cio=new IntersectionObserver((es)=>es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target;cio.unobserve(el);
     const t=+el.dataset.count,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',dur=1900,t0=performance.now();
     const run=(now)=>{let p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=pre+fmt(Math.round(t*e))+suf;if(p<1)requestAnimationFrame(run);else el.textContent=pre+fmt(t)+suf;};requestAnimationFrame(run);
   }),{threshold:.6});
